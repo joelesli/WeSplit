@@ -10,3 +10,13 @@ With less than 100 lines of code to build the UI and the business logic, it's im
 ```
 [LayoutConstraints] Unable to simultaneously satisfy constraints.
 ``` 
+
+## App Flow overview
+
+![](./readme_assets/wesplit_ui_flow/wesplit_ui_flow.001.jpeg)
+
+
+## TODO: Missing Feature / Remainder 
+Splits are not perfect...yet. You might want to split 53.50 EUR between three parties. This won't work, it returns $17.83, which times three is 52.49 EUR in total. To make the app accurate, the data types used need to change, my guess is to Decimal, so watch out for that.
+ 
+![](./readme_assets/complex_split.png) 
