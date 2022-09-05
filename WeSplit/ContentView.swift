@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var checkAmount = 50.0
     @State private var splitParties = 2
-    @State private var tipPercentage = 15
+    @State private var tipPercentage = 0
     @FocusState private var checkAmountIsFocused: Bool
     
     let tips = [0,10,15,20,25]
@@ -57,6 +57,7 @@ struct ContentView: View {
                     Text("Check amount")
                 } footer: {
                     Text("Total check including tip \(currencyFormatter.string(from: NSNumber(value: totalCheck))!)")
+                        .foregroundColor(tipPercentage == 0 ? .red : .green)
                 }
                 
                 Section("Split check") {
